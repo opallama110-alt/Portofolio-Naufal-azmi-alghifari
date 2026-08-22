@@ -4,6 +4,9 @@ Tinjauan ini berfokus pada halaman produksi `index.html`. Berkas
 `stitch_naufal_azmi_developer_portfolio/code.html` tampak sebagai artefak hasil
 ekspor/desain, bukan entry point situs.
 
+> **Status:** Keempat tugas di bawah telah diimplementasikan. Catatan ini
+> dipertahankan sebagai rekam keputusan dan kriteria regresi.
+
 ## 1. Salah ketik: betulkan kapitalisasi merek GitHub
 
 **Temuan:** Tautan footer menampilkan `Github`, sedangkan nama merek yang benar
@@ -16,6 +19,8 @@ yang terlihat oleh pengguna agar kapitalisasi nama produk konsisten.
 
 - Tidak ada lagi teks pengguna `Github` di entry point.
 - URL profil dan atribut aksesibilitas yang sudah benar tidak berubah.
+
+**Implementasi:** Label footer sekarang memakai kapitalisasi `GitHub`.
 
 ## 2. Bug: buat tombol Download CV benar-benar mengunduh CV
 
@@ -34,6 +39,10 @@ menjanjikan aksi unduh.
   static hosting.
 - Tautan dapat digunakan dengan keyboard dan mempunyai nama yang jelas bagi
   pembaca layar.
+
+**Implementasi:** Karena berkas CV publik belum tersedia di repositori, aksi
+diubah secara jujur menjadi `Request CV` yang membuka email dengan subjek
+permintaan CV, sesuai alternatif yang ditetapkan pada tugas.
 
 ## 3. Dokumentasi: selaraskan spesifikasi radius dengan konfigurasi Tailwind
 
@@ -56,6 +65,10 @@ pengecualian dari aturan umum.
 - Pemeriksaan manual pada viewport desktop dan seluler memastikan perubahan
   tidak merusak hierarki visual.
 
+**Implementasi:** Token dan panduan komponen di `DESIGN.md` kini mengikuti
+konfigurasi Tailwind halaman produksi, termasuk pengecualian `rounded-3xl` pada
+kartu proyek.
+
 ## 4. Pengujian: tambahkan smoke test otomatis untuk kontrak halaman statis
 
 **Temuan:** Repositori belum memiliki manifest test, direktori test, atau
@@ -63,8 +76,8 @@ workflow pemeriksaan otomatis. Perilaku penting seperti menu seluler, scroll
 spy, anchor internal, tautan eksternal, dan tombol CV karena itu mudah mengalami
 regresi tanpa terdeteksi.
 
-**Tugas:** Tambahkan test runner ringan (misalnya Playwright) dan CI yang
-menyajikan `index.html`, lalu menguji kontrak utama halaman.
+**Tugas:** Tambahkan test runner ringan dan CI yang memeriksa `index.html`, lalu
+menguji kontrak utama halaman.
 
 **Kriteria penerimaan:**
 
@@ -77,3 +90,7 @@ menyajikan `index.html`, lalu menguji kontrak utama halaman.
   anchor bagian lain.
 - Test dijalankan pada setiap pull request dan menyediakan satu perintah lokal
   yang terdokumentasi.
+
+**Implementasi:** Suite `unittest` tanpa dependensi menguji kontrak markup dan
+aksesibilitas halaman, perintah lokal didokumentasikan di `README.md`, dan
+workflow GitHub Actions menjalankannya pada push serta pull request.

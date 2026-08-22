@@ -199,7 +199,7 @@
         </div>
         
         <!-- Mobile Menu Toggle -->
-        <button class="md:hidden text-on-surface-variant hover:text-primary focus:outline-none" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <button class="md:hidden text-on-surface-variant hover:text-primary focus:outline-none" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
             <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
     </div>
@@ -230,8 +230,8 @@
             Crafting seamless user experiences and robust backend systems with embedded AI.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 z-10 relative">
-            <a class="bg-primary text-on-primary-fixed font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary-fixed-dim hover:scale-105 hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all duration-200 text-center" href="#contact">
-                Download CV
+            <a class="bg-primary text-on-primary-fixed font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary-fixed-dim hover:scale-105 hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all duration-200 text-center" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id?subject=CV%20Request">
+                Request CV
             </a>
             <a class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 text-text-slate-100 font-label-md text-label-md px-8 py-3 rounded-full hover:border-primary hover:text-primary hover:scale-105 hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-200 text-center flex items-center justify-center gap-2" href="#contact">
                 <i data-lucide="mail" class="w-4 h-4"></i> Contact Me
@@ -477,7 +477,7 @@
             © 2026 Naufal Azmi Alghifari. Built with technical precision.
         </div>
         <div class="flex gap-6">
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="https://github.com/opallama110-alt" target="_blank" rel="noopener noreferrer">Github</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="https://github.com/opallama110-alt" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="https://linkedin.com/in/naufal-azmi-55869838b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id">Email</a>
         </div>
@@ -498,13 +498,18 @@
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
     if (mobileMenuBtn && mobileMenu) {
+        const setMobileMenuOpen = (isOpen) => {
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+        };
+
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            setMobileMenuOpen(mobileMenu.classList.contains('hidden'));
         });
 
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+                setMobileMenuOpen(false);
             });
         });
     }
