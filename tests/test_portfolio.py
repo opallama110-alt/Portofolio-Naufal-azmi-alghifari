@@ -1,5 +1,6 @@
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 import unittest
 
 
@@ -54,6 +55,46 @@ class PortfolioContractTests(unittest.TestCase):
         self.assertEqual(button.get("aria-expanded"), "false")
         self.assertIn("setAttribute('aria-expanded', String(isOpen))", HTML)
         self.assertIn("setMobileMenuOpen(false)", HTML)
+
+    def test_certificate_assets_are_published_and_linked(self):
+        certificate_dir = ROOT / "assets" / "certificates"
+        bootcamp_certificate = certificate_dir / "ai-bootcamp-certificate.png"
+        hacktiv8_pdf = certificate_dir / "hacktiv8-ai-integration-certificate.pdf"
+        hacktiv8_preview = certificate_dir / "hacktiv8-ai-integration-certificate.webp"
+
+        self.assertGreater(bootcamp_certificate.stat().st_size, 100_000)
+        self.assertGreater(hacktiv8_pdf.stat().st_size, 100_000)
+        self.assertGreater(hacktiv8_preview.stat().st_size, 50_000)
+        self.assertIn('href="assets/certificates/ai-bootcamp-certificate.png"', HTML)
+        self.assertIn('src="assets/certificates/ai-bootcamp-certificate.png"', HTML)
+        self.assertIn('href="assets/certificates/hacktiv8-ai-integration-certificate.pdf"', HTML)
+        self.assertIn('src="assets/certificates/hacktiv8-ai-integration-certificate.webp"', HTML)
+        self.assertIn("AI Bootcamp — ImpactPreneur Business Challenge 2026", HTML)
+        self.assertIn("AI Productivity and AI API Integration for Developers", HTML)
+
+    def test_social_buttons_have_accessible_inline_brand_icons(self):
+        expected_links = {
+            "instagram": "https://www.instagram.com/naz_all_/",
+            "linkedin": "https://linkedin.com/in/naufal-azmi-55869838b",
+            "github": "https://github.com/opallama110-alt",
+        }
+        social_links = {
+            link.get("data-social"): link
+            for link in self.page.links
+            if link.get("data-social")
+        }
+
+        for name, href in expected_links.items():
+            with self.subTest(name=name):
+                self.assertIn(name, social_links)
+                self.assertEqual(social_links[name].get("href"), href)
+                self.assertTrue(social_links[name].get("aria-label"))
+                self.assertNotIn(f'data-lucide="{name}"', HTML)
+                self.assertRegex(HTML, rf'(?s)data-social="{name}"[^>]*>\s*<svg\b')
+
+    def test_whatsapp_link_uses_international_number_format(self):
+        self.assertIn('href="https://wa.me/62813166000376"', HTML)
+        self.assertNotRegex(HTML, re.compile(r'https://wa\.me/0'))
 
 
 if __name__ == "__main__":
