@@ -99,10 +99,11 @@ typography:
     lineHeight: '1.0'
 rounded:
   sm: 0.125rem
-  DEFAULT: 0.25rem
-  md: 0.375rem
-  lg: 0.5rem
-  xl: 0.75rem
+  DEFAULT: 0.125rem
+  lg: 0.25rem
+  xl: 0.5rem
+  2xl: 1rem
+  3xl: 1.5rem
   full: 9999px
 spacing:
   base: 4px
@@ -147,23 +148,23 @@ Avoid blurs or heavy drop shadows. Keep edges crisp to maintain the professional
 
 ## Shapes
 
-The shape language is **Soft (0.25rem)**. This slight rounding takes the edge off the brutalist origins of tech-style designs, making the UI feel modern and approachable without becoming "bubbly."
+The shape language ranges from **Soft (0.125rem)** for default controls to **rounded (1.5rem)** for prominent surfaces. This takes the edge off the brutalist origins of tech-style designs while letting featured sections and cards feel approachable.
 
-- **Buttons:** 4px radius for a standard sharp-technical look.
-- **Cards:** 8px (rounded-lg) to provide enough curve to feel intentional.
-- **Inputs:** 4px radius to match buttons.
+- **Buttons:** Use `rounded-full` for the pill-shaped calls to action in the current portfolio.
+- **Project cards:** Use 24px (`rounded-3xl`) as an intentional exception for prominent surfaces.
+- **Inputs:** Use 2px (`rounded`) for a sharp, technical look.
 - **Icons:** Use Lucide React icons with a 2px stroke width for consistency.
 
 ## Components
 
 ### Buttons
-Primary buttons use a solid Cyan background with Slate-900 text. Secondary buttons use a Slate-800 background with a 1px Slate-700 border. All buttons should have a `transition: all 0.2s ease-in-out` for hover states.
+Primary buttons use a solid Cyan background with Slate-900 text. Secondary buttons use a Slate-800 background with a 1px Slate-700 border. Portfolio calls to action use `rounded-full`. All buttons should have a `transition: all 0.2s ease-in-out` for hover states.
 
 ### Cards
-Project cards are the core component. Use a Slate-800 background with a 1px border. The title uses `headline-md`, and tags use `label-sm` with a secondary Indigo background at 10% opacity.
+Project cards are the core component. Use a Slate-800 background, a 1px border, and `rounded-3xl` (24px) corners. The title uses `headline-md`, and tags use `label-sm` with a secondary Indigo background at 10% opacity.
 
 ### Input Fields
-Inputs should be Slate-900 with a 1px Slate-700 border. On focus, the border changes to Cyan. Placeholders use Slate-400.
+Inputs should be Slate-900 with a 1px Slate-700 border and the default `rounded` token (2px). On focus, the border changes to Cyan. Placeholders use Slate-400.
 
 ### Chips/Tags
 Tags use JetBrains Mono for a "code-tag" feel. They should be low-contrast (Slate-800 background) unless they indicate a specific high-priority skill, in which case use a subtle Cyan border.
