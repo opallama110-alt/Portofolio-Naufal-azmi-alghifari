@@ -1,328 +1,556 @@
 <!DOCTYPE html>
-<html class="dark scroll-smooth" lang="en">
+<html class="dark" lang="en">
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Naufal Azmi Alghifari - Developer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-container-lowest": "#060e20",
-                    "on-tertiary-fixed-variant": "#6a3b00",
-                    "on-tertiary-fixed": "#2d1600",
-                    "inverse-surface": "#dae2fd",
-                    "surface-slate-800": "#1e293b",
-                    "surface-container-high": "#222a3d",
-                    "tertiary": "#ffb873",
-                    "on-background": "#dae2fd",
-                    "text-slate-100": "#f8fafc",
-                    "on-surface-variant": "#bcc9cd",
-                    "on-surface": "#dae2fd",
-                    "secondary-fixed": "#e1e0ff",
-                    "outline": "#869397",
-                    "on-primary-fixed-variant": "#004e5c",
-                    "inverse-on-surface": "#283044",
-                    "on-tertiary": "#4b2800",
-                    "surface-container-low": "#131b2e",
-                    "bg-slate-900": "#0f172a",
-                    "surface-container-highest": "#2d3449",
-                    "tertiary-fixed": "#ffdcbf",
-                    "secondary": "#c0c1ff",
-                    "surface-dim": "#0b1326",
-                    "on-primary": "#003640",
-                    "border-slate-800": "#1e293b",
-                    "secondary-fixed-dim": "#c0c1ff",
-                    "error": "#ffb4ab",
-                    "tertiary-container": "#e89337",
-                    "background": "#0b1326",
-                    "tertiary-fixed-dim": "#ffb873",
-                    "on-secondary-container": "#b0b2ff",
-                    "error-container": "#93000a",
-                    "on-secondary": "#1000a9",
-                    "surface-variant": "#2d3449",
-                    "on-primary-container": "#00424f",
-                    "outline-variant": "#3d494c",
-                    "on-error": "#690005",
-                    "surface": "#0b1326",
-                    "surface-container": "#171f33",
-                    "on-error-container": "#ffdad6",
-                    "text-slate-400": "#94a3b8",
-                    "surface-tint": "#4cd7f6",
-                    "surface-bright": "#31394d",
-                    "primary-container": "#06b6d4",
-                    "on-secondary-fixed": "#07006c",
-                    "inverse-primary": "#00687a",
-                    "on-tertiary-container": "#5b3200",
-                    "primary": "#4cd7f6",
-                    "on-secondary-fixed-variant": "#2f2ebe",
-                    "primary-fixed-dim": "#4cd7f6",
-                    "secondary-container": "#3131c0",
-                    "primary-fixed": "#acedff",
-                    "on-primary-fixed": "#001f26"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "2xl": "1rem",
-                    "3xl": "1.5rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "margin-desktop": "64px",
-                    "max-width": "1200px",
-                    "margin-mobile": "16px",
-                    "base": "4px",
-                    "gutter": "24px"
-            },
-            "fontFamily": {
-                    "label-md": [
-                            "JetBrains Mono"
-                    ],
-                    "headline-md": [
-                            "Geist"
-                    ],
-                    "body-md": [
-                            "Inter"
-                    ],
-                    "label-sm": [
-                            "JetBrains Mono"
-                    ],
-                    "headline-lg": [
-                            "Geist"
-                    ],
-                    "body-lg": [
-                            "Inter"
-                    ],
-                    "display-mobile": [
-                            "Geist"
-                    ],
-                    "display": [
-                            "Geist"
-                    ]
-            },
-            "fontSize": {
-                    "label-md": [
-                            "14px",
-                            {
-                                    "lineHeight": "1.0",
-                                    "letterSpacing": "0.02em",
-                                    "fontWeight": "500"
-                            }
-                    ],
-                    "headline-md": [
-                            "24px",
-                            {
-                                    "lineHeight": "1.4",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-md": [
-                            "16px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "label-sm": [
-                            "12px",
-                            {
-                                    "lineHeight": "1.0",
-                                    "fontWeight": "500"
-                            }
-                    ],
-                    "headline-lg": [
-                            "32px",
-                            {
-                                    "lineHeight": "1.3",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-lg": [
-                            "18px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "display-mobile": [
-                            "36px",
-                            {
-                                    "lineHeight": "1.2",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "display": [
-                            "48px",
-                            {
-                                    "lineHeight": "1.1",
-                                    "letterSpacing": "-0.04em",
-                                    "fontWeight": "700"
-                            }
-                    ]
-            }
-    },
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Naufal Azmi Alghifari — Backend &amp; AI API Developer</title>
+    <meta name="description" content="Portfolio of Naufal Azmi Alghifari, an Information Systems student at Telkom University building reliable backend systems, AI API integrations, and user-centered interfaces.">
+    <meta name="author" content="Naufal Azmi Alghifari">
+    <meta name="theme-color" content="#0b1326">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Naufal Azmi Alghifari — Backend &amp; AI API Developer">
+    <meta property="og:description" content="Backend systems, AI API integration, and UI/UX design. Selected projects, certificates, and contact details.">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&amp;family=Inter:wght@400..700&amp;family=JetBrains+Mono:wght@400..600&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Naufal Azmi Alghifari",
+        "jobTitle": "Backend & AI API Developer",
+        "email": "mailto:naufalazmialghifari@student.telkomuniversity.ac.id",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Telkom University"
         },
-      }
+        "knowsAbout": ["Backend development", "AI API integration", "UI/UX design", "Oracle SQL", "Gemini API"],
+        "sameAs": [
+            "https://github.com/opallama110-alt",
+            "https://linkedin.com/in/naufal-azmi-55869838b",
+            "https://www.instagram.com/naz_all_/"
+        ]
+    }
     </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Geist', sans-serif; }
-        .font-mono-tag { font-family: 'JetBrains Mono', monospace; }
-    </style>
 </head>
-<body class="bg-surface text-text-slate-400 min-h-screen relative">
+<body>
 
-<!-- Global WebGL Background -->
-<canvas class="fixed inset-0 w-full h-full -z-10 pointer-events-none" id="hero-glcanvas"></canvas>
+<!-- Icon sprite (Lucide, ISC license) and brand marks -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-external-link" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="i-pen-tool" viewBox="0 0 24 24"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+    <symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.371 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM3.558 9h3.558v11.452H3.558V9zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849s-.012 3.584-.069 4.849c-.149 3.225-1.664 4.771-4.919 4.919-1.265.058-1.644.069-4.849.069s-3.584-.012-4.849-.069c-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849s.013-3.583.07-4.849C2.381 3.924 3.896 2.38 7.151 2.232 8.417 2.175 8.796 2.163 12 2.163zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+</svg>
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant transition-all duration-200 ease-in-out">
-    <div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-        <a class="font-headline-md text-headline-md text-primary font-bold hover:opacity-90 transition-all duration-200" href="#home">NAUFAL AZMI</a>
-        
-        <div class="hidden md:flex items-center gap-8">
-            <a class="nav-link text-primary font-bold border-b-2 border-primary pb-1 rounded-full font-body-md text-body-md transition-all duration-200 ease-in-out" href="#home">Home</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#about">About</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#skills">Skills</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#projects">Projects</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#contact">Contact</a>
-            <a class="bg-primary text-on-primary-fixed font-label-md text-label-md px-6 py-2 rounded-full font-medium hover:opacity-90 hover:scale-105 hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all duration-200" href="#contact">Hire Me</a>
+<a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-primary focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-on-primary-fixed" href="#main">Skip to content</a>
+
+<!-- Ambient background: static gradient fallback plus an optional WebGL glow -->
+<div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 bg-[radial-gradient(55%_45%_at_78%_18%,rgba(6,182,212,0.16),transparent_70%),radial-gradient(45%_40%_at_10%_85%,rgba(49,49,192,0.18),transparent_70%)]"></div>
+<canvas id="bg-canvas" aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 h-full w-full opacity-0 transition-opacity duration-1000"></canvas>
+
+<!-- Header -->
+<header id="site-header" data-scrolled="false" class="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-surface/70 backdrop-blur-xl transition-[background-color,box-shadow] duration-300 data-[scrolled=true]:bg-surface/90 data-[scrolled=true]:shadow-[0_10px_30px_-15px_rgba(0,0,0,0.7)]">
+    <nav class="container-page flex h-16 items-center justify-between gap-6" aria-label="Primary">
+        <a class="flex items-center gap-3 rounded-xl" href="#home" aria-label="Naufal Azmi, back to top">
+            <span aria-hidden="true" class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-primary to-secondary font-mono text-sm font-bold text-on-primary-fixed shadow-[0_0_20px_-4px_rgba(76,215,246,0.5)]">NA</span>
+            <span class="font-display text-base font-semibold tracking-tight text-slate-100">Naufal Azmi</span>
+        </a>
+
+        <div class="hidden items-center gap-1 md:flex">
+            <a class="nav-link" data-nav-link href="#about">About</a>
+            <a class="nav-link" data-nav-link href="#skills">Skills</a>
+            <a class="nav-link" data-nav-link href="#projects">Projects</a>
+            <a class="nav-link" data-nav-link href="#certificates">Certificates</a>
+            <a class="nav-link" data-nav-link href="#contact">Contact</a>
         </div>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="md:hidden text-on-surface-variant hover:text-primary focus:outline-none" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
-            <i data-lucide="menu" class="w-6 h-6"></i>
+
+        <a class="btn-primary hidden !px-5 !py-2.5 md:inline-flex" href="#contact">Get in touch</a>
+
+        <button class="group grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-slate-300 transition-colors hover:border-primary/50 hover:text-primary md:hidden" id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+            <svg class="icon group-aria-expanded:hidden" aria-hidden="true"><use href="#i-menu"></use></svg>
+            <svg class="icon hidden group-aria-expanded:block" aria-hidden="true"><use href="#i-x"></use></svg>
         </button>
-    </div>
+    </nav>
 
-    <!-- Mobile Menu -->
-    <div class="md:hidden hidden bg-surface-slate-800/95 backdrop-blur-md border-b border-outline-variant absolute w-full left-0 top-16 rounded-b-3xl shadow-xl transition-all duration-300" id="mobile-menu">
-        <div class="flex flex-col p-6 space-y-4">
-            <a class="mobile-nav-link text-primary font-bold border-b-2 border-primary pb-1 inline-block w-fit font-body-md text-body-md" href="#home">Home</a>
-            <a class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#about">About</a>
-            <a class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#skills">Skills</a>
-            <a class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#projects">Projects</a>
-            <a class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#contact">Contact</a>
+    <div class="hidden border-t border-white/[0.06] bg-surface/95 backdrop-blur-xl md:hidden" id="mobile-menu">
+        <div class="container-page flex flex-col gap-1 py-4">
+            <a class="mobile-nav-link rounded-xl px-3 py-3 text-base font-medium text-slate-300 transition-colors hover:bg-white/[0.04] hover:text-primary" data-nav-link href="#about">About</a>
+            <a class="mobile-nav-link rounded-xl px-3 py-3 text-base font-medium text-slate-300 transition-colors hover:bg-white/[0.04] hover:text-primary" data-nav-link href="#skills">Skills</a>
+            <a class="mobile-nav-link rounded-xl px-3 py-3 text-base font-medium text-slate-300 transition-colors hover:bg-white/[0.04] hover:text-primary" data-nav-link href="#projects">Projects</a>
+            <a class="mobile-nav-link rounded-xl px-3 py-3 text-base font-medium text-slate-300 transition-colors hover:bg-white/[0.04] hover:text-primary" data-nav-link href="#certificates">Certificates</a>
+            <a class="mobile-nav-link rounded-xl px-3 py-3 text-base font-medium text-slate-300 transition-colors hover:bg-white/[0.04] hover:text-primary" data-nav-link href="#contact">Contact</a>
+            <a class="mobile-nav-link btn-primary mt-3" href="#contact">Get in touch</a>
         </div>
     </div>
-</nav>
+</header>
 
-<!-- Main Content -->
-<main class="pt-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-    <!-- Hero Section (#home) -->
-    <section class="min-h-[80vh] flex flex-col justify-center items-center text-center py-20 relative overflow-hidden rounded-3xl" id="home">
-        <h1 class="font-display-mobile md:font-display text-text-slate-100 mb-4 z-10 relative">
-            Naufal Azmi Alghifari
-        </h1>
-        <h2 class="font-headline-md text-headline-md text-primary mb-6 drop-shadow-[0_0_8px_rgba(76,215,246,0.5)] z-10 relative">
-            Backend &amp; AI API Developer | UI/UX Enthusiast
-        </h2>
-        <p class="font-body-lg text-body-lg text-text-slate-400 max-w-2xl mx-auto mb-10 z-10 relative">
-            Crafting seamless user experiences and robust backend systems with embedded AI.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 z-10 relative">
-            <a class="bg-primary text-on-primary-fixed font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary-fixed-dim hover:scale-105 hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all duration-200 text-center" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id?subject=CV%20Request">
-                Request CV
-            </a>
-            <a class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 text-text-slate-100 font-label-md text-label-md px-8 py-3 rounded-full hover:border-primary hover:text-primary hover:scale-105 hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-200 text-center flex items-center justify-center gap-2" href="#contact">
-                <i data-lucide="mail" class="w-4 h-4"></i> Contact Me
-            </a>
+<main id="main" tabindex="-1" class="outline-none">
+    <!-- Hero -->
+    <section class="relative flex items-center overflow-hidden pb-16 pt-32 md:pb-24 md:pt-40 lg:min-h-[min(100svh,960px)] lg:pb-20 lg:pt-32" id="home">
+        <div aria-hidden="true" class="bg-grid pointer-events-none absolute inset-0 -z-10"></div>
+        <div class="container-page grid items-center gap-16 lg:grid-cols-[1.12fr_0.88fr]">
+            <div class="reveal">
+                <p class="inline-flex items-center gap-2.5 rounded-full border border-emerald-400/20 bg-emerald-400/[0.07] px-3.5 py-1.5 font-mono text-xs text-emerald-300">
+                    <span aria-hidden="true" class="relative flex h-2 w-2">
+                        <span class="absolute inline-flex h-full w-full animate-pulse-ring rounded-full bg-emerald-400"></span>
+                        <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                    </span>
+                    Open to collaboration
+                </p>
+                <h1 class="mt-7 text-[2.75rem] font-bold leading-[1.04] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+                    Naufal Azmi <span class="text-gradient">Alghifari</span>
+                </h1>
+                <p class="mt-6 font-display text-xl font-medium text-slate-200 sm:text-2xl">
+                    Backend &amp; AI API Developer <span aria-hidden="true" class="hidden text-slate-600 sm:inline">/</span> <span class="block text-slate-400 sm:inline">UI/UX Enthusiast</span>
+                </p>
+                <p class="mt-5 max-w-xl text-base leading-relaxed sm:text-lg">
+                    I build reliable backend systems, integrate practical AI through modern APIs, and design interfaces that feel effortless to use.
+                </p>
+                <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+                    <a class="btn-primary" href="#projects">
+                        View my work
+                        <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                    </a>
+                    <a class="btn-secondary" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id?subject=CV%20Request">Request CV <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-file-text"></use></svg></a>
+                </div>
+                <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                    <li class="inline-flex items-center gap-2"><svg class="icon h-4 w-4 text-primary" aria-hidden="true"><use href="#i-map-pin"></use></svg>Indonesia</li>
+                    <li class="inline-flex items-center gap-2"><svg class="icon h-4 w-4 text-primary" aria-hidden="true"><use href="#i-graduation-cap"></use></svg>Telkom University</li>
+                    <li class="inline-flex items-center gap-2"><svg class="icon h-4 w-4 text-primary" aria-hidden="true"><use href="#i-badge-check"></use></svg>2 verified AI certificates</li>
+                </ul>
+            </div>
+
+            <!-- Decorative profile card; the same facts are available as text elsewhere on the page -->
+            <div class="reveal relative hidden lg:block" style="--reveal-delay: 150ms" aria-hidden="true">
+                <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-primary/25 via-transparent to-secondary-container/40 blur-3xl"></div>
+                <div class="card relative overflow-hidden !bg-slate-950/75 shadow-2xl shadow-black/40">
+                    <div class="flex items-center gap-2 border-b border-white/[0.06] px-5 py-3.5">
+                        <span class="h-3 w-3 rounded-full bg-[#ff5f57]/80"></span>
+                        <span class="h-3 w-3 rounded-full bg-[#febc2e]/80"></span>
+                        <span class="h-3 w-3 rounded-full bg-[#28c840]/80"></span>
+                        <span class="ml-3 font-mono text-xs text-slate-500">naufal.ts</span>
+                    </div>
+<pre class="overflow-x-auto px-5 pb-14 pt-6 font-mono text-[13px] leading-7 text-slate-300"><code><span class="inline-block w-7 select-none text-slate-600">1</span><span class="text-secondary">const</span> <span class="text-slate-100">naufal</span> <span class="text-slate-500">=</span> <span class="text-slate-500">{</span>
+<span class="inline-block w-7 select-none text-slate-600">2</span>  <span class="text-primary">role</span><span class="text-slate-500">:</span> <span class="text-tertiary">"Backend &amp; AI API Developer"</span><span class="text-slate-500">,</span>
+<span class="inline-block w-7 select-none text-slate-600">3</span>  <span class="text-primary">backend</span><span class="text-slate-500">: [</span><span class="text-tertiary">"PHP"</span><span class="text-slate-500">,</span> <span class="text-tertiary">"Java"</span><span class="text-slate-500">,</span> <span class="text-tertiary">"Oracle SQL"</span><span class="text-slate-500">],</span>
+<span class="inline-block w-7 select-none text-slate-600">4</span>  <span class="text-primary">ai</span><span class="text-slate-500">: [</span><span class="text-tertiary">"Gemini API"</span><span class="text-slate-500">,</span> <span class="text-tertiary">"Vertex AI"</span><span class="text-slate-500">],</span>
+<span class="inline-block w-7 select-none text-slate-600">5</span>  <span class="text-primary">design</span><span class="text-slate-500">: [</span><span class="text-tertiary">"Figma"</span><span class="text-slate-500">,</span> <span class="text-tertiary">"Prototyping"</span><span class="text-slate-500">],</span>
+<span class="inline-block w-7 select-none text-slate-600">6</span>  <span class="text-primary">currentFocus</span><span class="text-slate-500">:</span> <span class="text-tertiary">"AI-powered apps"</span><span class="text-slate-500">,</span>
+<span class="inline-block w-7 select-none text-slate-600">7</span><span class="text-slate-500">};</span>
+<span class="inline-block w-7 select-none text-slate-600">8</span>
+<span class="inline-block w-7 select-none text-slate-600">9</span><span class="italic text-slate-500">// Turning ideas into reliable, AI-enabled products.</span></code></pre>
+                </div>
+                <div class="card absolute -bottom-8 -left-8 flex items-center gap-3 !rounded-2xl !bg-slate-900/90 px-4 py-3 shadow-xl shadow-black/40">
+                    <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                        <svg class="icon" aria-hidden="true"><use href="#i-badge-check"></use></svg>
+                    </span>
+                    <span>
+                        <span class="block text-sm font-semibold text-slate-100">AI API Integration</span>
+                        <span class="block font-mono text-[11px] text-slate-400">Certified · Hacktiv8 2026</span>
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Section (#about) -->
-    <section class="py-20 my-10" id="about">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="font-headline-lg text-headline-lg text-text-slate-100 mb-6">About Me</h3>
-                <div class="space-y-4 font-body-md text-body-md text-text-slate-400">
-                    <p>
-                        Hi! I am a 20-year-old D3 Information Systems student passionate about blending elegant design with powerful functionality. My journey in tech spans from conceptualizing user interfaces to architecting backend databases.
-                    </p>
-                    <p>
-                        I specialize in creating systems that not only look good but perform exceptionally well under the hood. Recently, I've been diving deep into integrating AI capabilities into traditional applications to create smarter, more intuitive tools.
-                    </p>
-                    <div class="mt-6 p-6 bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl">
-                        <h4 class="font-headline-md text-base text-primary mb-2 flex items-center gap-2">
-                            <i data-lucide="award" class="w-5 h-5"></i> Verified Learning
-                        </h4>
-                        <p class="font-body-md text-sm text-text-slate-300">
-                            Two public credentials in AI integration and practical AI solutions for MSMEs (2026).
-                        </p>
-                    </div>
-                </div>
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container-page grid items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+            <div class="reveal relative mx-auto w-full max-w-sm lg:max-w-none">
+                <div aria-hidden="true" class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary/25 via-transparent to-secondary-container/40 blur-2xl"></div>
+                <figure class="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-800 to-slate-950">
+                    <span aria-hidden="true" class="absolute inset-0 grid place-items-center font-display text-8xl font-bold text-white/[0.06]">NA</span>
+                    <img class="relative h-full w-full object-cover grayscale-[40%] transition duration-700 hover:grayscale-0" data-fallback
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAipaRwOT6BAecmVlB3dUgU4YXq27SxDtfwfIlhe41RAJvKotAadJqKuT7ywMwX9skrk9VPWy0YxMbjp2HwU6TZiphMluk8VlTUMX0yV412Uoud3_wRM67eCPEVIypOTcJRWMMUj1wR2ZTRLoe8-7moNjlcREXsjwnEOVe8nM_R4mmWevcbUCYwEh1Su7kYu8bVfGqQjhWyKT_2J3E_UGuaSwhwDkrQNkaChHuyHvLIlk6JnIr0rNmgMiSJWQ7FoNYbiw"
+                         alt="Portrait of Naufal Azmi Alghifari"
+                         width="800" height="1000" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-4 bottom-4 rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 backdrop-blur-md">
+                        <span class="block text-sm font-semibold text-slate-100">Naufal Azmi Alghifari</span>
+                        <span class="mt-0.5 block font-mono text-xs text-primary">Information Systems · Telkom University</span>
+                    </figcaption>
+                </figure>
             </div>
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                <div class="relative bg-surface-slate-800/80 backdrop-blur-md rounded-3xl overflow-hidden border border-border-slate-800 aspect-square md:aspect-[4/5] flex items-center justify-center">
-                    <img class="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 rounded-3xl" alt="Studio portrait of Naufal Azmi Alghifari" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAipaRwOT6BAecmVlB3dUgU4YXq27SxDtfwfIlhe41RAJvKotAadJqKuT7ywMwX9skrk9VPWy0YxMbjp2HwU6TZiphMluk8VlTUMX0yV412Uoud3_wRM67eCPEVIypOTcJRWMMUj1wR2ZTRLoe8-7moNjlcREXsjwnEOVe8nM_R4mmWevcbUCYwEh1Su7kYu8bVfGqQjhWyKT_2J3E_UGuaSwhwDkrQNkaChHuyHvLIlk6JnIr0rNmgMiSJWQ7FoNYbiw">
+
+            <div class="reveal" style="--reveal-delay: 100ms">
+                <p class="eyebrow">01 · About</p>
+                <h2 class="section-title">Designing the interface, engineering what runs behind it.</h2>
+                <div class="mt-6 space-y-4 text-base leading-relaxed md:text-lg">
+                    <p>
+                        I'm a D3 Information Systems student at Telkom University who enjoys the full journey of a product — from shaping the user experience to architecting the databases and services that power it.
+                    </p>
+                    <p>
+                        I focus on building systems that look good and perform well under the hood. Lately, I've been integrating AI capabilities such as the Gemini API into traditional applications to make them smarter and more intuitive.
+                    </p>
                 </div>
+
+                <dl class="mt-8 grid gap-3 sm:grid-cols-3">
+                    <div class="card !rounded-2xl px-4 py-4">
+                        <dt class="font-mono text-[11px] uppercase tracking-wider text-slate-400">Focus</dt>
+                        <dd class="mt-1.5 text-sm font-medium text-slate-100">Backend &amp; AI APIs</dd>
+                    </div>
+                    <div class="card !rounded-2xl px-4 py-4">
+                        <dt class="font-mono text-[11px] uppercase tracking-wider text-slate-400">Education</dt>
+                        <dd class="mt-1.5 text-sm font-medium text-slate-100">D3 Information Systems</dd>
+                    </div>
+                    <div class="card !rounded-2xl px-4 py-4">
+                        <dt class="font-mono text-[11px] uppercase tracking-wider text-slate-400">Based in</dt>
+                        <dd class="mt-1.5 text-sm font-medium text-slate-100">Indonesia</dd>
+                    </div>
+                </dl>
+
+                <a class="group mt-4 flex items-center gap-4 rounded-2xl border border-primary/20 bg-primary/[0.05] p-4 transition-colors hover:border-primary/50 hover:bg-primary/[0.08]" href="#certificates">
+                    <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+                        <svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg>
+                    </span>
+                    <span class="min-w-0 flex-1">
+                        <span class="block text-sm font-semibold text-slate-100">Verified learning</span>
+                        <span class="block text-sm">Two 2026 credentials in AI API integration and practical AI solutions for MSMEs.</span>
+                    </span>
+                    <svg class="icon h-5 w-5 text-primary transition-transform group-hover:translate-x-1" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                </a>
             </div>
         </div>
+    </section>
 
-        <div class="mt-12" id="certificates">
-            <div class="text-center mb-8">
-                <div class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider mb-3">
-                    <i data-lucide="badge-check" class="w-5 h-5"></i>
-                    Verified Credentials
-                </div>
-                <h4 class="font-headline-lg text-headline-lg text-text-slate-100">Certificates</h4>
+    <!-- Skills -->
+    <section class="section" id="skills">
+        <div class="container-page">
+            <div class="reveal max-w-2xl">
+                <p class="eyebrow">02 · Skills</p>
+                <h2 class="section-title">Technical toolkit</h2>
+                <p class="section-lead">The tools and disciplines I use to take an idea from wireframe to a working, AI-enabled product.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(76,215,246,0.1)] transition-all duration-300">
-                    <a class="block overflow-hidden border-b border-border-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+            <div class="mt-12 grid gap-6 md:grid-cols-3">
+                <article class="reveal card card-interactive p-7">
+                    <span class="grid h-12 w-12 place-items-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
+                        <svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-pen-tool"></use></svg>
+                    </span>
+                    <h3 class="mt-6 text-xl font-semibold">UI/UX &amp; Design</h3>
+                    <p class="mt-2 text-sm leading-relaxed">Researching users, structuring flows, and prototyping interfaces before a single line of code.</p>
+                    <ul class="mt-6 flex flex-wrap gap-2" aria-label="UI/UX and design skills">
+                        <li class="chip">Figma</li>
+                        <li class="chip">Visily AI</li>
+                        <li class="chip">Wireframing</li>
+                        <li class="chip">User Research</li>
+                        <li class="chip">Prototyping</li>
+                    </ul>
+                </article>
+
+                <article class="reveal card card-interactive p-7" style="--reveal-delay: 80ms">
+                    <span class="grid h-12 w-12 place-items-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
+                        <svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-database"></use></svg>
+                    </span>
+                    <h3 class="mt-6 text-xl font-semibold">Backend &amp; Database</h3>
+                    <p class="mt-2 text-sm leading-relaxed">Designing data models and server-side logic that stay dependable as features grow.</p>
+                    <ul class="mt-6 flex flex-wrap gap-2" aria-label="Backend and database skills">
+                        <li class="chip">PHP</li>
+                        <li class="chip">Java</li>
+                        <li class="chip chip-accent">Oracle SQL</li>
+                        <li class="chip">System Architecture</li>
+                        <li class="chip">Real-time Sync</li>
+                    </ul>
+                </article>
+
+                <article class="reveal card card-interactive p-7" style="--reveal-delay: 160ms">
+                    <span class="grid h-12 w-12 place-items-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
+                        <svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-cpu"></use></svg>
+                    </span>
+                    <h3 class="mt-6 text-xl font-semibold">AI &amp; Integration</h3>
+                    <p class="mt-2 text-sm leading-relaxed">Connecting language models to real applications through clean, well-structured API integrations.</p>
+                    <ul class="mt-6 flex flex-wrap gap-2" aria-label="AI and integration skills">
+                        <li class="chip chip-accent">Gemini AI API</li>
+                        <li class="chip">Vertex AI</li>
+                        <li class="chip">Prompt Engineering</li>
+                        <li class="chip">Antigravity</li>
+                    </ul>
+                </article>
+            </div>
+
+            <p class="reveal mt-6 flex items-center gap-2.5 text-xs">
+                <span aria-hidden="true" class="chip chip-accent !px-2 !py-0.5 !text-[10px]">core</span>
+                Highlighted skills are my primary strengths.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+        <div class="container-page">
+            <div class="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                <div class="max-w-2xl">
+                    <p class="eyebrow">03 · Projects</p>
+                    <h2 class="section-title">Selected work</h2>
+                    <p class="section-lead">A mix of AI, backend, and product design work — each project built around a concrete problem.</p>
+                </div>
+                <a class="btn-secondary shrink-0 self-start md:self-auto" href="https://github.com/opallama110-alt" target="_blank" rel="noopener noreferrer">
+                    More on GitHub
+                    <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+                </a>
+            </div>
+
+            <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Project: Hacktiv8 AI Chatbot -->
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden">
+                    <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-gradient-to-br from-slate-800 to-slate-950">
+                        <svg class="icon absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-slate-700" aria-hidden="true"><use href="#i-cpu"></use></svg>
+                        <img class="relative h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100" data-fallback
+                             src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;q=80&amp;w=800"
+                             alt="Abstract illustration representing the Hacktiv8 AI chatbot"
+                             width="800" height="500" loading="lazy" decoding="async">
+                        <span class="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/75 px-3 py-1 font-mono text-[11px] text-slate-200 backdrop-blur">AI</span>
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <h3 class="text-xl font-semibold">Hacktiv8 AI Chatbot</h3>
+                            <span aria-hidden="true" class="pt-1 font-mono text-xs text-slate-600">01</span>
+                        </div>
+                        <p class="mt-1 font-mono text-xs text-primary">AI Developer</p>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed">A custom AI chatbot that integrates the Gemini API into a standalone web platform, automating intelligent responses and user interactions.</p>
+                        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                            <li class="tag">Gemini AI</li>
+                            <li class="tag">React</li>
+                            <li class="tag">Node.js</li>
+                            <li class="tag">API Integration</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project: TuNotes -->
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden" style="--reveal-delay: 80ms">
+                    <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-gradient-to-br from-slate-800 to-slate-950">
+                        <svg class="icon absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-slate-700" aria-hidden="true"><use href="#i-pen-tool"></use></svg>
+                        <img class="relative h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100" data-fallback
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLYut9J_EcPJOYP4DF3wEAlshBJW-h7ikDJE5lRn_pHA5byuF0dCzH1cTbHilVeuhFO-sKJqcMHyG1HTQAd1Oxc-weLNsyYn7fbGzPfJe8g_RkWJoTlCknRVWGLFqxn97hWCCVugAiaNuN5B7SsIWfe8x_w1k3zsQkoJksL-Xkl5Lp__LkHKEW4OY6DBWQ_AYa_j_iZuVZQ3es_KAe2nPciU6zJr5-HnE9nLZHvg6dynnogHOwGNZ3m6WF2oqDe9P7q3Mn-P4uY-XoyA"
+                             alt="Preview of the TuNotes student notes interface"
+                             width="800" height="500" loading="lazy" decoding="async">
+                        <span class="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/75 px-3 py-1 font-mono text-[11px] text-slate-200 backdrop-blur">UI/UX</span>
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <h3 class="text-xl font-semibold">TuNotes</h3>
+                            <span aria-hidden="true" class="pt-1 font-mono text-xs text-slate-600">02</span>
+                        </div>
+                        <p class="mt-1 font-mono text-xs text-primary">UI/UX Designer</p>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed">A student notes management system designed around efficient note-taking and everyday productivity.</p>
+                        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                            <li class="tag">Figma</li>
+                            <li class="tag">User Research</li>
+                            <li class="tag">AI Prompting</li>
+                            <li class="tag">UI/UX</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project: OurLife (Ourfit) -->
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden" style="--reveal-delay: 160ms">
+                    <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-gradient-to-br from-slate-800 to-slate-950">
+                        <svg class="icon absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-slate-700" aria-hidden="true"><use href="#i-layers"></use></svg>
+                        <img class="relative h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100" data-fallback
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8EEn_FNn8L3ungQLGW8GHPgrBrEA7eCL1OzwXt4M5FKrrcAAiTqY9jbjgETZq8fCghWcE7e1Z3XJ9ZbRuJBEn2nlKW8O6tzey7PLdBT14hg_x8Xsu1CTevbFXtc0ron0kHhmVGnAYR1Vh-QdlvMIwapB2Ufx8dBG51iGaOPPf1EHydlguANacCL26Of1UCsUDZud5lghMIkrot3uvYuObRQoxhFPSm3WFxZiJuQ1fjiEvs0uTh26OA_819JuycAyIt8SnXTyEdTq6Q"
+                             alt="Preview of the OurLife lifestyle tracker sign-in screen"
+                             width="800" height="500" loading="lazy" decoding="async">
+                        <span class="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/75 px-3 py-1 font-mono text-[11px] text-slate-200 backdrop-blur">Web App</span>
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <h3 class="text-xl font-semibold">OurLife (Ourfit)</h3>
+                            <span aria-hidden="true" class="pt-1 font-mono text-xs text-slate-600">03</span>
+                        </div>
+                        <p class="mt-1 font-mono text-xs text-primary">Web Developer</p>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed">A gamified lifestyle tracker with real-time synchronization and custom interactive SVG visualizations.</p>
+                        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                            <li class="tag">Web Dev</li>
+                            <li class="tag">Real-time Sync</li>
+                            <li class="tag">SVG</li>
+                            <li class="tag">Gamification</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project: Saku -->
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden">
+                    <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-gradient-to-br from-slate-800 to-slate-950">
+                        <svg class="icon absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-slate-700" aria-hidden="true"><use href="#i-database"></use></svg>
+                        <img class="relative h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100" data-fallback
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAolw_5HhLUMBauuSwS-DR7-XHdxr1t4BWkI_JkYOhHkXIOgCSfSKWq-LiN8QX3NBb2SW3d-e75V2IaS_jrJWiI9qsTVGqua-4wRNis2W5J8AZGaSuQwHy_--Nj_1WGQbqXBtYhu3vyfUo7ooZ5rRgTXAZ456XqQnzaxshJLdYp8y4z9kKbdtxw1_J-5LfCef6wv8WbFWrci8HZlVPE3Nif2P2J3Q7K4YUd1bE8aqnIJHSkVc81b7gSaKPCaDHLTCPPHw"
+                             alt="Preview of the Saku finance dashboard"
+                             width="800" height="500" loading="lazy" decoding="async">
+                        <span class="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/75 px-3 py-1 font-mono text-[11px] text-slate-200 backdrop-blur">Backend</span>
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <h3 class="text-xl font-semibold">Saku</h3>
+                            <span aria-hidden="true" class="pt-1 font-mono text-xs text-slate-600">04</span>
+                        </div>
+                        <p class="mt-1 font-mono text-xs text-primary">Backend Developer</p>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed">A personalized finance and utility application with modular features and secure data storage.</p>
+                        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                            <li class="tag">Backend</li>
+                            <li class="tag">Web Development</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project: Automated Trading Bot -->
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden" style="--reveal-delay: 80ms">
+                    <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-gradient-to-br from-slate-800 to-slate-950">
+                        <svg class="icon absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-slate-700" aria-hidden="true"><use href="#i-cpu"></use></svg>
+                        <img class="relative h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100" data-fallback
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6kbdssPwNf3KrAmcnZJ7YPSFY4bb24b90a2QqXZfmMCuMqBTCvPeO9wlz_CtPr4ZULfhAyTunv_ZXwA-B-gVPh9oG-Ya2v-ATchbBrDVmFKPqfsxmtpL8nSF4MwjRSt5xjbdqxlnQUIDcyJmR6Bx1hEw5Dgd1iQXDQPuYC0WWVkE-XSt5uxmKFw65A3txkEfIk3JJc6tyPpFpS2yiwtU5Ak7SsQgRWrqB6BxxotMXMOdwAr5fjP-LdwZlZxvAOdMa1ki097O5Re63lg"
+                             alt="Preview of the automated trading bot terminal output"
+                             width="800" height="500" loading="lazy" decoding="async">
+                        <span class="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/75 px-3 py-1 font-mono text-[11px] text-slate-200 backdrop-blur">Automation</span>
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <h3 class="text-xl font-semibold">Automated Trading Bot</h3>
+                            <span aria-hidden="true" class="pt-1 font-mono text-xs text-slate-600">05</span>
+                        </div>
+                        <p class="mt-1 font-mono text-xs text-primary">Algorithm Developer</p>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed">An algorithmic trading bot that integrates machine learning models for market prediction and automated execution.</p>
+                        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                            <li class="tag">API Integration</li>
+                            <li class="tag">Automation</li>
+                            <li class="tag">Algorithmic Logic</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project: Academic Information System -->
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden" style="--reveal-delay: 160ms">
+                    <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-gradient-to-br from-slate-800 to-slate-950">
+                        <svg class="icon absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-slate-700" aria-hidden="true"><use href="#i-database"></use></svg>
+                        <img class="relative h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100" data-fallback
+                             src="https://lh3.googleusercontent.com/aida/AP1WRLufQlEByuMzsxH-M_4O3lSrswTTiOWbL5CQRr7kQOS5HX_EbOeNUJQ_McZ8TmUV1XSyNTIYyQC2cW0FtBIj_YIY4JO0xqxFYTfDEeKbUsK3zZnJJ4zpahZJuhxXo5PM4AGoaC6tqNfkth1YyZvECOASbo7xfhMCXcaYtlHtb3-0f-XdwCDNnsgW2zG6TMsR9Xgzsk01VmE78KTe6hlDYpzpzldi_UcjxOuegJApBXBZPSfAfLakSRyexg"
+                             alt="Database architecture diagram for the academic information system"
+                             width="800" height="500" loading="lazy" decoding="async">
+                        <span class="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/75 px-3 py-1 font-mono text-[11px] text-slate-200 backdrop-blur">Database</span>
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <h3 class="text-xl font-semibold">Academic Information System</h3>
+                            <span aria-hidden="true" class="pt-1 font-mono text-xs text-slate-600">06</span>
+                        </div>
+                        <p class="mt-1 font-mono text-xs text-primary">Database Administrator</p>
+                        <p class="mt-4 flex-1 text-sm leading-relaxed">Database design and structural development for academic record tracking, built on Oracle SQL.</p>
+                        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                            <li class="tag">Oracle SQL</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">Data Analytics</li>
+                            <li class="tag">DB Structuring</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section class="section" id="certificates">
+        <div class="container-page">
+            <div class="reveal max-w-2xl">
+                <p class="eyebrow">04 · Certificates</p>
+                <h2 class="section-title">Certificates &amp; training</h2>
+                <p class="section-lead">Recent, verifiable learning focused on applying AI in real products.</p>
+            </div>
+
+            <div class="mt-12 grid gap-6 lg:grid-cols-2">
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden">
+                    <a class="block overflow-hidden border-b border-white/[0.06] bg-white/[0.03]"
                        href="assets/certificates/hacktiv8-ai-integration-certificate.pdf"
                        target="_blank"
                        rel="noopener noreferrer"
                        aria-label="Open Hacktiv8 AI integration certificate PDF">
-                        <img class="w-full h-auto object-cover opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-500"
+                        <img class="aspect-[1516/1072] w-full object-cover transition duration-500 group-hover:scale-[1.02]"
                              src="assets/certificates/hacktiv8-ai-integration-certificate.webp"
                              alt="Hacktiv8 AI Productivity and AI API Integration for Developers certificate awarded to Naufal Azmi Alghifari"
-                             loading="lazy">
+                             width="1516" height="1072" loading="lazy" decoding="async">
                     </a>
-                    <div class="p-6">
-                        <p class="font-label-sm text-label-sm text-primary mb-2">Hacktiv8 · Maju Bareng AI</p>
-                        <h5 class="font-headline-md text-headline-md text-text-slate-100 mb-3">AI Productivity and AI API Integration for Developers</h5>
-                        <p class="font-body-md text-sm text-text-slate-400 mb-4">Completed a 10-hour developer program and final project focused on practical AI productivity and API integration.</p>
-                        <a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-primary-fixed transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                    <div class="flex flex-1 flex-col p-6 md:p-7">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <p class="font-mono text-xs text-primary">Hacktiv8 · Maju Bareng AI</p>
+                            <span class="chip !py-1 !text-[11px]">Jul 2026</span>
+                        </div>
+                        <h3 class="mt-3 text-xl font-semibold leading-snug">AI Productivity and AI API Integration for Developers</h3>
+                        <p class="mt-3 text-sm leading-relaxed">Completed a 10-hour developer program and final project focused on practical AI productivity and API integration.</p>
+                        <dl class="mt-5 grid gap-x-6 gap-y-3 text-xs sm:grid-cols-2">
+                            <div>
+                                <dt class="font-mono uppercase tracking-wider text-slate-400">Training period</dt>
+                                <dd class="mt-1 text-sm text-slate-200">20–25 Jun 2026</dd>
+                            </div>
+                            <div>
+                                <dt class="font-mono uppercase tracking-wider text-slate-400">Credential ID</dt>
+                                <dd class="mt-1 break-all font-mono text-sm text-slate-200">07226/H8/CSR/MBA2/VII/2026</dd>
+                            </div>
+                        </dl>
+                        <a class="mt-auto inline-flex items-center gap-2 self-start pt-6 text-sm font-semibold text-primary transition-colors hover:text-primary-fixed"
                            href="assets/certificates/hacktiv8-ai-integration-certificate.pdf"
                            target="_blank"
                            rel="noopener noreferrer">
-                            Open PDF <i data-lucide="external-link" class="w-4 h-4"></i>
+                            Open PDF <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-external-link"></use></svg>
                         </a>
                     </div>
                 </article>
 
-                <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(76,215,246,0.1)] transition-all duration-300">
-                    <a class="block overflow-hidden border-b border-border-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                <article class="reveal card card-interactive group flex flex-col overflow-hidden" style="--reveal-delay: 100ms">
+                    <a class="block overflow-hidden border-b border-white/[0.06] bg-white/[0.03]"
                        href="assets/certificates/ai-bootcamp-certificate.png"
                        target="_blank"
                        rel="noopener noreferrer"
                        aria-label="Open AI Bootcamp certificate in full size">
-                        <img class="w-full h-auto object-cover opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-500"
-                             src="assets/certificates/ai-bootcamp-certificate.png"
+                        <img class="aspect-[1516/1072] w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+                             src="assets/certificates/ai-bootcamp-certificate.webp"
                              alt="AI Bootcamp ImpactPreneur Business Challenge 2026 certificate awarded to Naufal Azmi Alghifari"
-                             loading="lazy">
+                             width="1200" height="848" loading="lazy" decoding="async">
                     </a>
-                    <div class="p-6">
-                        <p class="font-label-sm text-label-sm text-primary mb-2">Bank Indonesia Cirebon · Telkom University</p>
-                        <h5 class="font-headline-md text-headline-md text-text-slate-100 mb-3">AI Bootcamp — ImpactPreneur Business Challenge 2026</h5>
-                        <p class="font-body-md text-sm text-text-slate-400 mb-4">Participated in an AI bootcamp focused on building practical Artificial Intelligence solutions for MSMEs.</p>
-                        <a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-primary-fixed transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                    <div class="flex flex-1 flex-col p-6 md:p-7">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <p class="font-mono text-xs text-primary">Bank Indonesia Cirebon · Telkom University</p>
+                            <span class="chip !py-1 !text-[11px]">Aug 2026</span>
+                        </div>
+                        <h3 class="mt-3 text-xl font-semibold leading-snug">AI Bootcamp — ImpactPreneur Business Challenge 2026</h3>
+                        <p class="mt-3 text-sm leading-relaxed">Participated in an AI bootcamp, part of Trikarsa Festival 2026, focused on building practical Artificial Intelligence solutions for MSMEs.</p>
+                        <dl class="mt-5 grid gap-x-6 gap-y-3 text-xs sm:grid-cols-2">
+                            <div>
+                                <dt class="font-mono uppercase tracking-wider text-slate-400">Event dates</dt>
+                                <dd class="mt-1 text-sm text-slate-200">1–2 Aug 2026</dd>
+                            </div>
+                            <div>
+                                <dt class="font-mono uppercase tracking-wider text-slate-400">Location</dt>
+                                <dd class="mt-1 text-sm text-slate-200">Cirebon, Indonesia</dd>
+                            </div>
+                        </dl>
+                        <a class="mt-auto inline-flex items-center gap-2 self-start pt-6 text-sm font-semibold text-primary transition-colors hover:text-primary-fixed"
                            href="assets/certificates/ai-bootcamp-certificate.png"
                            target="_blank"
                            rel="noopener noreferrer">
-                            View certificate <i data-lucide="external-link" class="w-4 h-4"></i>
+                            View certificate <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-external-link"></use></svg>
                         </a>
                     </div>
                 </article>
@@ -330,334 +558,309 @@
         </div>
     </section>
 
-    <!-- Skills Section (#skills) -->
-    <section class="py-20 my-10" id="skills">
-        <h3 class="font-headline-lg text-headline-lg text-text-slate-100 mb-10 text-center">Technical Arsenal</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- UI/UX -->
-            <div class="bg-surface-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-border-slate-800 hover:border-primary/50 transition-all duration-300">
-                <div class="flex items-center gap-3 mb-6 text-text-slate-100">
-                    <i data-lucide="pen-tool" class="text-primary w-6 h-6"></i>
-                    <h4 class="font-headline-md text-lg">UI/UX &amp; Design</h4>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Figma</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Visily AI</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Wireframing</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">User Research</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Prototyping</span>
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container-page">
+            <div class="reveal relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-secondary-container/25 p-7 backdrop-blur-md sm:p-10 lg:p-14">
+                <div aria-hidden="true" class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl"></div>
+                <div class="relative grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                    <div>
+                        <p class="eyebrow">05 · Contact</p>
+                        <h2 class="section-title md:text-5xl">Let's build something together.</h2>
+                        <p class="section-lead">Have a project, a collaboration idea, or just want to say hello? I'd love to hear from you.</p>
+                        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                            <a class="btn-primary" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id">
+                                <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-mail"></use></svg>
+                                Send an email
+                            </a>
+                            <button class="btn-secondary" id="copy-email" type="button" data-email="naufalazmialghifari@student.telkomuniversity.ac.id">
+                                <svg class="icon h-4 w-4" aria-hidden="true"><use data-copy-icon href="#i-copy"></use></svg>
+                                <span data-copy-label>Copy email</span>
+                            </button>
+                        </div>
+                        <p class="mt-4 break-all font-mono text-xs text-slate-400">naufalazmialghifari@student.telkomuniversity.ac.id</p>
+                        <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+                    </div>
+
+                    <ul class="grid gap-3">
+                        <li>
+                            <a class="group flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.03] p-3 pr-5 transition-colors hover:border-primary/40 hover:bg-white/[0.06]" href="https://wa.me/62813166000376" target="_blank" rel="noopener noreferrer" aria-label="Chat with Naufal on WhatsApp (opens in a new tab)" data-social="whatsapp">
+                                <svg class="icon h-11 w-11 rounded-xl bg-white/[0.05] p-3 text-slate-200 transition-colors group-hover:text-primary" aria-hidden="true"><use href="#i-message-circle"></use></svg>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block text-sm font-semibold text-slate-100">WhatsApp</span>
+                                    <span class="block truncate font-mono text-xs text-slate-400">Chat directly</span>
+                                </span>
+                                <svg class="icon h-4 w-4 text-slate-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.03] p-3 pr-5 transition-colors hover:border-primary/40 hover:bg-white/[0.06]" href="https://linkedin.com/in/naufal-azmi-55869838b" target="_blank" rel="noopener noreferrer" aria-label="Visit Naufal on LinkedIn (opens in a new tab)" data-social="linkedin">
+                                <svg class="icon-brand h-11 w-11 rounded-xl bg-white/[0.05] p-3 text-slate-200 transition-colors group-hover:text-primary" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block text-sm font-semibold text-slate-100">LinkedIn</span>
+                                    <span class="block truncate font-mono text-xs text-slate-400">in/naufal-azmi</span>
+                                </span>
+                                <svg class="icon h-4 w-4 text-slate-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.03] p-3 pr-5 transition-colors hover:border-primary/40 hover:bg-white/[0.06]" href="https://github.com/opallama110-alt" target="_blank" rel="noopener noreferrer" aria-label="Visit Naufal on GitHub (opens in a new tab)" data-social="github">
+                                <svg class="icon-brand h-11 w-11 rounded-xl bg-white/[0.05] p-3 text-slate-200 transition-colors group-hover:text-primary" aria-hidden="true"><use href="#i-github"></use></svg>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block text-sm font-semibold text-slate-100">GitHub</span>
+                                    <span class="block truncate font-mono text-xs text-slate-400">opallama110-alt</span>
+                                </span>
+                                <svg class="icon h-4 w-4 text-slate-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.03] p-3 pr-5 transition-colors hover:border-primary/40 hover:bg-white/[0.06]" href="https://www.instagram.com/naz_all_/" target="_blank" rel="noopener noreferrer" aria-label="Visit Naufal on Instagram (opens in a new tab)" data-social="instagram">
+                                <svg class="icon-brand h-11 w-11 rounded-xl bg-white/[0.05] p-3 text-slate-200 transition-colors group-hover:text-primary" aria-hidden="true"><use href="#i-instagram"></use></svg>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block text-sm font-semibold text-slate-100">Instagram</span>
+                                    <span class="block truncate font-mono text-xs text-slate-400">@naz_all_</span>
+                                </span>
+                                <svg class="icon h-4 w-4 text-slate-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- Backend -->
-            <div class="bg-surface-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-border-slate-800 hover:border-primary/50 transition-all duration-300">
-                <div class="flex items-center gap-3 mb-6 text-text-slate-100">
-                    <i data-lucide="database" class="text-primary w-6 h-6"></i>
-                    <h4 class="font-headline-md text-lg">Backend &amp; Database</h4>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">PHP</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Java</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors border-primary/30">Oracle SQL</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Architecture</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Real-time Sync</span>
-                </div>
-            </div>
-            <!-- AI -->
-            <div class="bg-surface-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-border-slate-800 hover:border-primary/50 transition-all duration-300">
-                <div class="flex items-center gap-3 mb-6 text-text-slate-100">
-                    <i data-lucide="cpu" class="text-primary w-6 h-6"></i>
-                    <h4 class="font-headline-md text-lg">AI &amp; Integration</h4>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors border-primary/30">Gemini AI API</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Vertex AI</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Prompt Eng.</span>
-                    <span class="font-label-sm text-label-sm bg-bg-slate-900/50 border border-border-slate-800 px-4 py-2 rounded-full text-text-slate-300 hover:border-primary hover:text-primary cursor-default transition-colors">Antigravity</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section (#projects) -->
-    <section class="py-20 my-10" id="projects">
-        <h3 class="font-headline-lg text-headline-lg text-text-slate-100 mb-10">Selected Works</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Project: Hacktiv8 AI Chatbot -->
-            <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-300 flex flex-col group">
-                <div class="bg-cover bg-center w-full h-48 border-b border-border-slate-800 opacity-80 group-hover:opacity-100 transition-opacity" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800');"></div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-headline-md text-xl text-text-slate-100">Hacktiv8 AI Chatbot</h4>
-                    </div>
-                    <p class="font-body-md text-sm text-primary mb-3">AI Developer</p>
-                    <p class="font-body-md text-sm text-text-slate-400 flex-1 mb-4">
-                        Built a custom AI chatbot integrating Gemini API to run seamlessly on a standalone web platform, automating intelligent responses and user interactions.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Gemini AI</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">React</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Node.js</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">API Integration</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 1: TuNotes -->
-            <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-300 flex flex-col group">
-                <div class="bg-cover bg-center w-full h-48 border-b border-border-slate-800 opacity-80 group-hover:opacity-100 transition-opacity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLYut9J_EcPJOYP4DF3wEAlshBJW-h7ikDJE5lRn_pHA5byuF0dCzH1cTbHilVeuhFO-sKJqcMHyG1HTQAd1Oxc-weLNsyYn7fbGzPfJe8g_RkWJoTlCknRVWGLFqxn97hWCCVugAiaNuN5B7SsIWfe8x_w1k3zsQkoJksL-Xkl5Lp__LkHKEW4OY6DBWQ_AYa_j_iZuVZQ3es_KAe2nPciU6zJr5-HnE9nLZHvg6dynnogHOwGNZ3m6WF2oqDe9P7q3Mn-P4uY-XoyA');"></div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-headline-md text-xl text-text-slate-100">TuNotes</h4>
-                    </div>
-                    <p class="font-body-md text-sm text-primary mb-3">UI/UX</p>
-                    <p class="font-body-md text-sm text-text-slate-400 flex-1 mb-4">
-                        Student Notes Management system designed with focus on efficient note-taking and user productivity.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Figma</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">User Research</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">AI Prompting</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">UI/UX</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 2: OurLife (Ourfit) -->
-            <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-300 flex flex-col group">
-                <div class="bg-cover bg-center w-full h-48 border-b border-border-slate-800 opacity-80 group-hover:opacity-100 transition-opacity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAh8EEn_FNn8L3ungQLGW8GHPgrBrEA7eCL1OzwXt4M5FKrrcAAiTqY9jbjgETZq8fCghWcE7e1Z3XJ9ZbRuJBEn2nlKW8O6tzey7PLdBT14hg_x8Xsu1CTevbFXtc0ron0kHhmVGnAYR1Vh-QdlvMIwapB2Ufx8dBG51iGaOPPf1EHydlguANacCL26Of1UCsUDZud5lghMIkrot3uvYuObRQoxhFPSm3WFxZiJuQ1fjiEvs0uTh26OA_819JuycAyIt8SnXTyEdTq6Q');"></div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-headline-md text-xl text-text-slate-100">OurLife (Ourfit)</h4>
-                    </div>
-                    <p class="font-body-md text-sm text-primary mb-3">Web Dev</p>
-                    <p class="font-body-md text-sm text-text-slate-400 flex-1 mb-4">
-                        Gamified Lifestyle Tracker with real-time synchronization and custom SVG interactive visualizations.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Web Dev</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Real-time Sync</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">SVG</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Gamification</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 3: Saku -->
-            <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-300 flex flex-col group">
-                <div class="bg-cover bg-center w-full h-48 border-b border-border-slate-800 opacity-80 group-hover:opacity-100 transition-opacity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAolw_5HhLUMBauuSwS-DR7-XHdxr1t4BWkI_JkYOhHkXIOgCSfSKWq-LiN8QX3NBb2SW3d-e75V2IaS_jrJWiI9qsTVGqua-4wRNis2W5J8AZGaSuQwHy_--Nj_1WGQbqXBtYhu3vyfUo7ooZ5rRgTXAZ456XqQnzaxshJLdYp8y4z9kKbdtxw1_J-5LfCef6wv8WbFWrci8HZlVPE3Nif2P2J3Q7K4YUd1bE8aqnIJHSkVc81b7gSaKPCaDHLTCPPHw');"></div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-headline-md text-xl text-text-slate-100">Saku</h4>
-                    </div>
-                    <p class="font-body-md text-sm text-primary mb-3">Backend</p>
-                    <p class="font-body-md text-sm text-text-slate-400 flex-1 mb-4">
-                        Personalized financial and utility application offering modular features and secure data storage.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Backend</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Web Development</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 4: Automated Trading Bot -->
-            <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-300 flex flex-col group">
-                <div class="bg-cover bg-center w-full h-48 border-b border-border-slate-800 opacity-80 group-hover:opacity-100 transition-opacity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6kbdssPwNf3KrAmcnZJ7YPSFY4bb24b90a2QqXZfmMCuMqBTCvPeO9wlz_CtPr4ZULfhAyTunv_ZXwA-B-gVPh9oG-Ya2v-ATchbBrDVmFKPqfsxmtpL8nSF4MwjRSt5xjbdqxlnQUIDcyJmR6Bx1hEw5Dgd1iQXDQPuYC0WWVkE-XSt5uxmKFw65A3txkEfIk3JJc6tyPpFpS2yiwtU5Ak7SsQgRWrqB6BxxotMXMOdwAr5fjP-LdwZlZxvAOdMa1ki097O5Re63lg');"></div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-headline-md text-xl text-text-slate-100">Automated Trading Bot</h4>
-                    </div>
-                    <p class="font-body-md text-sm text-primary mb-3">Algorithm Developer</p>
-                    <p class="font-body-md text-sm text-text-slate-400 flex-1 mb-4">
-                        Algorithmic trading bot integrating machine learning models for market prediction and automated execution.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">API Integration</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Automation</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Algorithmic Logic</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 5: Academic Information System -->
-            <article class="bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_15px_rgba(76,215,246,0.1)] transition-all duration-300 flex flex-col group">
-                <div class="bg-cover bg-center w-full h-48 border-b border-border-slate-800 opacity-80 group-hover:opacity-100 transition-opacity" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLufQlEByuMzsxH-M_4O3lSrswTTiOWbL5CQRr7kQOS5HX_EbOeNUJQ_McZ8TmUV1XSyNTIYyQC2cW0FtBIj_YIY4JO0xqxFYTfDEeKbUsK3zZnJJ4zpahZJuhxXo5PM4AGoaC6tqNfkth1YyZvECOASbo7xfhMCXcaYtlHtb3-0f-XdwCDNnsgW2zG6TMsR9Xgzsk01VmE78KTe6hlDYpzpzldi_UcjxOuegJApBXBZPSfAfLakSRyexg');"></div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-headline-md text-xl text-text-slate-100">Academic Information System</h4>
-                    </div>
-                    <p class="font-body-md text-sm text-primary mb-3">Database Administrator</p>
-                    <p class="font-body-md text-sm text-text-slate-400 flex-1 mb-4">
-                        Database management and structural development for academic tracking with Oracle SQL.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Oracle SQL</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">PHP</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">Data Analytics</span>
-                        <span class="font-label-sm text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full">DB Structuring</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Contact Section (#contact) -->
-    <section class="py-20 my-10 text-center mb-10" id="contact">
-        <h3 class="font-headline-lg text-headline-lg text-text-slate-100 mb-6">Let's Connect</h3>
-        <p class="font-body-md text-body-md text-text-slate-400 mb-10 max-w-xl mx-auto">
-            Let's build something amazing together. Feel free to reach out for collaborations or just a friendly hello.
-        </p>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a class="inline-flex items-center justify-center p-4 bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-full text-text-slate-300 hover:text-primary hover:border-primary hover:bg-surface-slate-800/90 hover:scale-110 hover:shadow-[0_0_15px_rgba(76,215,246,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface transition-all duration-300" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id" aria-label="Send Naufal an email" title="Email Me">
-                <i data-lucide="mail" class="w-6 h-6"></i>
-            </a>
-            <a class="inline-flex items-center justify-center p-4 bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-full text-text-slate-300 hover:text-primary hover:border-primary hover:bg-surface-slate-800/90 hover:scale-110 hover:shadow-[0_0_15px_rgba(76,215,246,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface transition-all duration-300" href="https://wa.me/62813166000376" target="_blank" rel="noopener noreferrer" aria-label="Chat with Naufal on WhatsApp" title="WhatsApp">
-                <i data-lucide="message-circle" class="w-6 h-6"></i>
-            </a>
-            <a class="inline-flex items-center justify-center p-4 bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-full text-text-slate-300 hover:text-primary hover:border-primary hover:bg-surface-slate-800/90 hover:scale-110 hover:shadow-[0_0_15px_rgba(76,215,246,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface transition-all duration-300" href="https://www.instagram.com/naz_all_/" target="_blank" rel="noopener noreferrer" aria-label="Visit Naufal on Instagram" title="Instagram" data-social="instagram">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849s-.012 3.584-.069 4.849c-.149 3.225-1.664 4.771-4.919 4.919-1.265.058-1.644.069-4.849.069s-3.584-.012-4.849-.069c-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849s.013-3.583.07-4.849C2.381 3.924 3.896 2.38 7.151 2.232 8.417 2.175 8.796 2.163 12 2.163zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path>
-                </svg>
-            </a>
-            <a class="inline-flex items-center justify-center p-4 bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-full text-text-slate-300 hover:text-primary hover:border-primary hover:bg-surface-slate-800/90 hover:scale-110 hover:shadow-[0_0_15px_rgba(76,215,246,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface transition-all duration-300" href="https://linkedin.com/in/naufal-azmi-55869838b" target="_blank" rel="noopener noreferrer" aria-label="Visit Naufal on LinkedIn" title="LinkedIn" data-social="linkedin">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.371 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM3.558 9h3.558v11.452H3.558V9zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
-                </svg>
-            </a>
-            <a class="inline-flex items-center justify-center p-4 bg-surface-slate-800/80 backdrop-blur-md border border-border-slate-800 rounded-full text-text-slate-300 hover:text-primary hover:border-primary hover:bg-surface-slate-800/90 hover:scale-110 hover:shadow-[0_0_15px_rgba(76,215,246,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface transition-all duration-300" href="https://github.com/opallama110-alt" target="_blank" rel="noopener noreferrer" aria-label="Visit Naufal on GitHub" title="GitHub" data-social="github">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                </svg>
-            </a>
         </div>
     </section>
 </main>
 
 <!-- Footer -->
-<footer class="w-full bg-surface-container-lowest/80 backdrop-blur-md dark:bg-surface-container-lowest/80">
-    <div class="flex flex-col md:flex-row justify-between items-center py-10 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto opacity-80 hover:opacity-100 transition-opacity">
-        <div class="font-headline-sm text-headline-sm text-primary mb-4 md:mb-0 font-bold">
-            NAUFAL AZMI
+<footer class="border-t border-white/[0.06] bg-surface-container-lowest/80 backdrop-blur-md">
+    <div class="container-page py-12">
+        <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div>
+                <a class="inline-flex items-center gap-3 rounded-xl" href="#home">
+                    <span aria-hidden="true" class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-primary to-secondary font-mono text-sm font-bold text-on-primary-fixed">NA</span>
+                    <span class="font-display text-base font-semibold tracking-tight text-slate-100">Naufal Azmi Alghifari</span>
+                </a>
+                <p class="mt-3 max-w-xs text-sm">Backend &amp; AI API Developer building reliable, AI-enabled products.</p>
+            </div>
+            <nav aria-label="Footer">
+                <ul class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                    <li><a class="transition-colors hover:text-primary" href="#about">About</a></li>
+                    <li><a class="transition-colors hover:text-primary" href="#skills">Skills</a></li>
+                    <li><a class="transition-colors hover:text-primary" href="#projects">Projects</a></li>
+                    <li><a class="transition-colors hover:text-primary" href="#certificates">Certificates</a></li>
+                    <li><a class="transition-colors hover:text-primary" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="font-label-md text-label-md text-on-surface-variant mb-4 md:mb-0 text-center">
-            © 2026 Naufal Azmi Alghifari. Built with technical precision.
-        </div>
-        <div class="flex gap-6">
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="https://github.com/opallama110-alt" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="https://linkedin.com/in/naufal-azmi-55869838b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id">Email</a>
+        <div class="mt-10 flex flex-col gap-4 border-t border-white/[0.06] pt-6 text-sm md:flex-row md:items-center md:justify-between">
+            <p>© <span id="year">2026</span> Naufal Azmi Alghifari. All rights reserved.</p>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+                <a class="transition-colors hover:text-primary" href="https://github.com/opallama110-alt" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="transition-colors hover:text-primary" href="https://linkedin.com/in/naufal-azmi-55869838b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="transition-colors hover:text-primary" href="mailto:naufalazmialghifari@student.telkomuniversity.ac.id">Email</a>
+                <a class="inline-flex items-center gap-1.5 text-slate-300 transition-colors hover:text-primary" href="#home">
+                    Back to top <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
 
 <script>
-    // Initialize Lucide icons
-    document.addEventListener("DOMContentLoaded", () => {
-        if (window.lucide) {
-            lucide.createIcons();
+    (() => {
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        // Footer year
+        const year = document.getElementById('year');
+        if (year) {
+            year.textContent = String(new Date().getFullYear());
         }
-    });
 
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        // Reveal-on-scroll
+        const revealItems = document.querySelectorAll('.reveal');
+        if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+            revealItems.forEach(item => item.classList.add('is-visible'));
+        } else {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+            revealItems.forEach(item => revealObserver.observe(item));
+        }
 
-    if (mobileMenuBtn && mobileMenu) {
-        const setMobileMenuOpen = (isOpen) => {
-            mobileMenu.classList.toggle('hidden', !isOpen);
-            mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+        // Hide remote images that fail to load so the placeholder underneath shows instead
+        document.querySelectorAll('img[data-fallback]').forEach(img => {
+            const removeImage = () => img.remove();
+            if (img.complete && img.naturalWidth === 0) {
+                removeImage();
+            } else {
+                img.addEventListener('error', removeImage, { once: true });
+            }
+        });
+
+        // Header elevation once the page scrolls
+        const header = document.getElementById('site-header');
+        const updateHeader = () => header.setAttribute('data-scrolled', String(window.scrollY > 8));
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateHeader();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (mobileMenuBtn && mobileMenu) {
+            const setMobileMenuOpen = (isOpen) => {
+                mobileMenu.classList.toggle('hidden', !isOpen);
+                mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+            };
+            const isMenuOpen = () => !mobileMenu.classList.contains('hidden');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                setMobileMenuOpen(!isMenuOpen());
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    setMobileMenuOpen(false);
+                });
+            });
+
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && isMenuOpen()) {
+                    setMobileMenuOpen(false);
+                    mobileMenuBtn.focus();
+                }
+            });
+
+            document.addEventListener('click', event => {
+                if (isMenuOpen() && !header.contains(event.target)) {
+                    setMobileMenuOpen(false);
+                }
+            });
+
+            window.matchMedia('(min-width: 768px)').addEventListener('change', event => {
+                if (event.matches) {
+                    setMobileMenuOpen(false);
+                }
+            });
+        }
+
+        // Scroll spy: mark the nav link of the section crossing the middle of the viewport
+        const navLinks = document.querySelectorAll('[data-nav-link]');
+        const setActiveSection = (id) => {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
         };
 
-        mobileMenuBtn.addEventListener('click', () => {
-            setMobileMenuOpen(mobileMenu.classList.contains('hidden'));
-        });
+        if ('IntersectionObserver' in window) {
+            const spy = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            }, { rootMargin: '-45% 0px -50% 0px' });
+            document.querySelectorAll('main section[id]').forEach(section => spy.observe(section));
+        }
 
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                setMobileMenuOpen(false);
+        // Copy email to clipboard
+        const copyButton = document.getElementById('copy-email');
+        const copyStatus = document.getElementById('copy-status');
+        if (copyButton && copyStatus) {
+            const label = copyButton.querySelector('[data-copy-label]');
+            const icon = copyButton.querySelector('[data-copy-icon]');
+            let resetTimer;
+
+            copyButton.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(copyButton.dataset.email);
+                    label.textContent = 'Copied!';
+                    icon.setAttribute('href', '#i-check');
+                    copyStatus.textContent = 'Email address copied to clipboard.';
+                } catch (error) {
+                    label.textContent = 'Copy failed';
+                    copyStatus.textContent = 'Could not copy automatically. Please copy the email address shown below the buttons.';
+                }
+                clearTimeout(resetTimer);
+                resetTimer = setTimeout(() => {
+                    label.textContent = 'Copy email';
+                    icon.setAttribute('href', '#i-copy');
+                    copyStatus.textContent = '';
+                }, 2500);
             });
-        });
-    }
-
-    // Scroll spy for navbar active state
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const scrollY = window.scrollY;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 220)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
-            link.classList.add('text-on-surface-variant');
-            
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.remove('text-on-surface-variant');
-                link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
-            }
-        });
-    });
+        }
+    })();
 </script>
 
 <script>
-    (function initWebGL() {
-        const canvas = document.getElementById('hero-glcanvas');
+    // Ambient WebGL glow. Falls back to the static CSS gradient when WebGL is unavailable,
+    // renders a single still frame for reduced-motion users, and pauses in background tabs.
+    (function initBackground() {
+        const canvas = document.getElementById('bg-canvas');
         if (!canvas) return;
-        const gl = canvas.getContext('webgl');
+        const gl = canvas.getContext('webgl', { antialias: false, powerPreference: 'low-power' });
         if (!gl) return;
 
         const vertexShaderSource = `
             attribute vec2 position;
-            varying vec2 v_texCoord;
             void main() {
                 gl_Position = vec4(position, 0.0, 1.0);
-                v_texCoord = position * 0.5 + 0.5;
             }
         `;
         const fragmentShaderSource = `
-            precision highp float;
+            precision mediump float;
             uniform vec2 u_resolution;
             uniform float u_time;
 
             void main() {
                 vec2 p = (gl_FragCoord.xy * 2.0 - u_resolution) / min(u_resolution.x, u_resolution.y);
-                float t = u_time * 0.3;
-                vec3 col = vec3(0.04, 0.07, 0.15); // Deep navy background
-                
-                for(float i = 1.0; i < 4.0; i++) {
-                    p.x += 0.3 / i * sin(i * 3.0 * p.y + t);
-                    p.y += 0.3 / i * cos(i * 3.0 * p.x + t);
-                    float d = length(p);
-                    col += vec3(0.02, 0.71, 0.83) * (0.015 / (d * d)); // Cyan #06b6d4 glow
+                float t = u_time * 0.18;
+                vec3 col = vec3(0.043, 0.075, 0.149); // #0b1326 surface
+
+                vec2 q = p - vec2(0.75, 0.45);
+                for (float i = 1.0; i < 4.0; i++) {
+                    q.x += 0.3 / i * sin(i * 3.0 * q.y + t);
+                    q.y += 0.3 / i * cos(i * 3.0 * q.x + t);
+                    float d = length(q);
+                    col += vec3(0.02, 0.71, 0.83) * (0.004 / (d * d + 0.03)); // Cyan #06b6d4 glow
                 }
-                
-                gl_FragColor = vec4(col, 1.0);
+
+                vec2 r = p + vec2(0.9, 0.7);
+                col += vec3(0.19, 0.19, 0.75) * (0.035 / (dot(r, r) + 0.4)); // Indigo depth
+
+                gl_FragColor = vec4(min(col, vec3(1.0)), 1.0);
             }
         `;
 
-        function createShader(gl, type, source) {
+        function createShader(type, source) {
             const shader = gl.createShader(type);
             gl.shaderSource(shader, source);
             gl.compileShader(shader);
+            if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                gl.deleteShader(shader);
+                return null;
+            }
             return shader;
         }
 
-        const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
-        const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+        const vertexShader = createShader(gl.VERTEX_SHADER, vertexShaderSource);
+        const fragmentShader = createShader(gl.FRAGMENT_SHADER, fragmentShaderSource);
+        if (!vertexShader || !fragmentShader) return;
 
         const program = gl.createProgram();
         gl.attachShader(program, vertexShader);
         gl.attachShader(program, fragmentShader);
         gl.linkProgram(program);
+        if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return;
         gl.useProgram(program);
 
         const positionBuffer = gl.createBuffer();
@@ -677,22 +880,60 @@
 
         const timeLocation = gl.getUniformLocation(program, 'u_time');
         const resolutionLocation = gl.getUniformLocation(program, 'u_resolution');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        // The glow is soft, so rendering at half resolution is visually identical and much cheaper.
+        const RENDER_SCALE = 0.5;
+        let frameId = null;
+        let lastTime = 0;
 
         function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            gl.viewport(0, 0, canvas.width, canvas.height);
+            const width = Math.max(1, Math.floor(window.innerWidth * RENDER_SCALE));
+            const height = Math.max(1, Math.floor(window.innerHeight * RENDER_SCALE));
+            if (canvas.width !== width || canvas.height !== height) {
+                canvas.width = width;
+                canvas.height = height;
+                gl.viewport(0, 0, width, height);
+            }
         }
-        window.addEventListener('resize', resize);
-        resize();
 
-        function render(time) {
+        function draw(time) {
+            lastTime = time;
             gl.uniform1f(timeLocation, time * 0.001);
             gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
             gl.drawArrays(gl.TRIANGLES, 0, 6);
-            requestAnimationFrame(render);
         }
-        requestAnimationFrame(render);
+
+        function loop(time) {
+            draw(time);
+            frameId = requestAnimationFrame(loop);
+        }
+
+        function start() {
+            if (frameId === null && !reducedMotion.matches && !document.hidden) {
+                frameId = requestAnimationFrame(loop);
+            }
+        }
+
+        function stop() {
+            if (frameId !== null) {
+                cancelAnimationFrame(frameId);
+                frameId = null;
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            resize();
+            if (frameId === null) draw(lastTime);
+        });
+        document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+        reducedMotion.addEventListener('change', () => (reducedMotion.matches ? stop() : start()));
+
+        resize();
+        draw(0);
+        canvas.classList.remove('opacity-0');
+        canvas.classList.add('opacity-100');
+        start();
     })();
 </script>
 

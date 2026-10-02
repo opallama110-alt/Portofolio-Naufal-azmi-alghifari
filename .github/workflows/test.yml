@@ -14,3 +14,18 @@ jobs:
           python-version: "3.12"
       - name: Run portfolio contract tests
         run: python3 -m unittest discover -s tests -v
+
+  stylesheet-in-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install build dependencies
+        run: npm ci
+      - name: Rebuild Tailwind stylesheet
+        run: npm run build
+      - name: Fail if the committed stylesheet is out of date
+        run: git diff --exit-code -- assets/css/styles.css
