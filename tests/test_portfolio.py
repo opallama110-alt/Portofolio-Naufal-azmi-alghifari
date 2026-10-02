@@ -175,6 +175,10 @@ class PortfolioContractTests(unittest.TestCase):
             with self.subTest(section=section):
                 self.assertIn(f"#{section}", nav_targets)
 
+    def test_deployed_projects_link_to_their_live_apps(self):
+        live_links = {link.get("href") for link in self.page.links if "data-live-demo" in link}
+        self.assertEqual(live_links, {"https://ourfit.web.app", "https://saku-web-seven.vercel.app"})
+
     def test_skip_link_targets_main_content(self):
         self.assertIn("main", self.page.ids)
         self.assertTrue(any(link.get("href") == "#main" for link in self.page.links))
