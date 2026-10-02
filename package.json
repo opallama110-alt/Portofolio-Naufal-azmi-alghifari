@@ -1,0 +1,14 @@
+{
+  "name": "naufal-azmi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static developer portfolio of Naufal Azmi Alghifari.",
+  "scripts": {
+    "build": "tailwindcss -i ./src/styles.css -o ./assets/css/styles.css --minify",
+    "dev": "tailwindcss -i ./src/styles.css -o ./assets/css/styles.css --watch",
+    "test": "python3 -m unittest discover -s tests -v"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.19"
+  }
+}
